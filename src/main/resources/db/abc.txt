@@ -1,0 +1,10 @@
+abc
+application-test-containers.yml
+#spring:
+#  datasource:
+#    url: jdbc:tc:postgresql:9.6.8:///test_ass3_test
+#    username: postgres
+#    password: postgres
+#  jpa:
+#    hibernate:
+#      ddl-auto: create
