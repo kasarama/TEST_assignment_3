@@ -29,4 +29,9 @@ public class Customer {
 
     private String mobile;
 
+    public Customer(String firstName, String lastName, Date birthdate) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthdate = birthdate;
+    }
 }
