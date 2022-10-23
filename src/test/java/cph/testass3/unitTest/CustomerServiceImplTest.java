@@ -1,10 +1,8 @@
-package cph.testass3.customer;
+package cph.testass3.unitTest;
 
 import cph.testass3.model.Customer;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.testcontainers.junit.jupiter.Testcontainers;
@@ -24,14 +22,10 @@ class CustomerServiceImplTest {
     @Autowired
     private CustomerRepository customerRepository;
 
-    @BeforeEach
-    void init() {
-       // customerRepository.deleteAll();
-    }
+
 
     @Test
     void createCustomer() {
         Customer c = customerService.createCustomer("HE","LENA", new Date());
-        System.out.println(c.getId());
         assertNotNull(c);    }
 }

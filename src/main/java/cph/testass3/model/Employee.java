@@ -25,4 +25,10 @@ public class Employee {
 
     @Temporal(TemporalType.DATE)
     private Date birthdate;
+
+    public Employee(String firstName, String lastName, Date birthdate) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthdate = birthdate;
+    }
 }

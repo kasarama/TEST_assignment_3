@@ -29,25 +29,26 @@ public class Booking {
     @JoinColumn(name = "employee_id", nullable = false)
     private Employee employee;
 
-/*
-    @Column(name = "employee_id")
-    private Integer employeeId;
 
-    @Column(name = "customer_id")
-    private Integer customerId;
-*/
     @Temporal(TemporalType.DATE)
     @Column(name = "booking_date", nullable = false)
     private Date date;
 
-    @Temporal(TemporalType.TIME)
+
     @Column(name = "start_time", nullable = false)
-    private Date start;
+    private String start;
 
-    @Temporal(TemporalType.TIME)
+
     @Column(name = "end_time", nullable = false)
-    private Date end;
+    private String end;
 
+    public Booking(Customer customer, Employee employee, Date date, String start, String end) {
+        this.customer = customer;
+        this.employee = employee;
+        this.date = date;
+        this.start = start;
+        this.end = end;
+    }
 }
 
 
