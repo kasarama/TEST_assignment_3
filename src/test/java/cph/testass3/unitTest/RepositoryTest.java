@@ -11,10 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.testcontainers.junit.jupiter.Testcontainers;
 
-import java.text.SimpleDateFormat;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
-import java.util.Locale;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -48,7 +45,7 @@ public class RepositoryTest {
     @Test
     void addPhoneNumberForCustomer() {
         String mobile = "81819292";
-        c= new Customer ("A","B",new Date());
+        c = new Customer("A", "B", new Date());
         c.setMobile(mobile);
         customerRepository.save(c);
         assertTrue(customerRepository.findById(c.getId()).get().getMobile().equals(mobile));
@@ -57,15 +54,15 @@ public class RepositoryTest {
 
     @Test
     void createEmployee() {
-        Employee e= employeeRepository.save(new Employee("Hanna", "Panna", new Date()));
+        Employee e = employeeRepository.save(new Employee("Hanna", "Panna", new Date()));
         assertNotNull(e);
     }
 
     @Test
     void createNewBooking() {
-        Employee e= employeeRepository.save(new Employee("Hanna", "Panna", new Date()));
+        Employee e = employeeRepository.save(new Employee("Hanna", "Panna", new Date()));
         Customer c = customerRepository.save(new Customer("fName", "lName", new Date()));
-        Booking b = new Booking(c,e, new Date(), "15:15","17:30");
-        assertTrue(bookingRepository.save(b).getId()>0);
-}
+        Booking b = new Booking(c, e, new Date(), "15:15", "17:30");
+        assertTrue(bookingRepository.save(b).getId() > 0);
+    }
 }

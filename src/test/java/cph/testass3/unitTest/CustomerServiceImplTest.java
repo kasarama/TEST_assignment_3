@@ -19,10 +19,6 @@ class CustomerServiceImplTest {
     @Autowired
     private CustomerServiceImpl customerService;
 
-    @Autowired
-    private CustomerRepository customerRepository;
-
-
 
     @Test
     void createCustomer() {

@@ -1,8 +1,11 @@
 package cph.testass3.notification;
 
-public class SmsServiceImpl implements SmsService{
+import org.springframework.stereotype.Service;
+
+@Service
+public class SmsServiceImpl implements SmsService {
     @Override
-    public boolean sendSms() {
-        return true;
+    public String sendSms(String to) {
+        return "Sms sent to " + to;
     }
 }
