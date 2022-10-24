@@ -8,3 +8,6 @@ application-test-containers.yml
 #  jpa:
 #    hibernate:
 #      ddl-auto: create
+
+ALTER TABLE customers
+ADD COLUMN mobile varchar(255) constraint

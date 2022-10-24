@@ -1,7 +1,6 @@
-package cph.testass3.customer;
+package cph.testass3.unitTest;
 
 import cph.testass3.model.Customer;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -20,13 +19,6 @@ class CustomerServiceImplTest {
     @Autowired
     private CustomerServiceImpl customerService;
 
-    @Autowired
-    private CustomerRepository customerRepository;
-
-    @BeforeEach
-    void init() {
-       // customerRepository.deleteAll();
-    }
 
     @Test
     void createCustomer() {

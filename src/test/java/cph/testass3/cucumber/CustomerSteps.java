@@ -1,6 +1,7 @@
-package cph.testass3.customer;
+package cph.testass3.cucumber;
 
 import cph.testass3.model.Customer;
+import cph.testass3.unitTest.CustomerService;
 import io.cucumber.java.ParameterType;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
