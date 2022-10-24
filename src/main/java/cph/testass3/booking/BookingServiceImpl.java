@@ -4,7 +4,6 @@ import cph.testass3.model.Booking;
 import cph.testass3.model.Customer;
 import cph.testass3.model.Employee;
 import cph.testass3.notification.SmsServiceImpl;
-import cph.testass3.unitTest.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,28 +16,22 @@ public class BookingServiceImpl implements BookingService {
     SmsServiceImpl smsService;
     @Autowired
     BookingRepository bookingRepository;
-    @Autowired
-    CustomerRepository customerRepository;
 
     @Override
     public String createNewBooking(Customer customer, Employee employee, Date date, String start, String end) {
 
         Booking b = bookingRepository.save(new Booking(customer, employee, date, start, end));
         return smsService.sendSms(b.getCustomer().getFirstName());
-
     }
 
     @Override
     public Collection<Booking> getBookingsForCustomer(int customerId) {
-
         return bookingRepository.getBookingByCustomer_Id(customerId);
     }
 
     @Override
     public Collection<Booking> getBookingsForEmployee(int employeeId) {
-
         return bookingRepository.getBookingByEmployee_Id(employeeId);
     }
-
 
 }

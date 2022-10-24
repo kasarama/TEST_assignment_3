@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.Objects;
 
 import static javax.persistence.GenerationType.IDENTITY;
 
@@ -48,6 +49,19 @@ public class Booking {
         this.date = date;
         this.start = start;
         this.end = end;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Booking)) return false;
+        Booking booking = (Booking) o;
+        return getId().equals(booking.getId()) && getCustomer().equals(booking.getCustomer()) && getEmployee().equals(booking.getEmployee()) && getDate().equals(booking.getDate()) && getStart().equals(booking.getStart()) && getEnd().equals(booking.getEnd());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getCustomer(), getEmployee(), getDate(), getStart(), getEnd());
     }
 }
 
