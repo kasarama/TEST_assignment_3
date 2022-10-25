@@ -15,6 +15,8 @@ Features are tested both in service layer and data layer and are listed below
 
 
 #### R3: When booking an appointment with a customer, an SMS must be sent
+   - [Sms Service Implementation](src/main/java/cph/testass3/notification/SmsServiceImpl.java)   
+
 
 #### Data layer
 Data layer is tested in one file as the scope is very little
