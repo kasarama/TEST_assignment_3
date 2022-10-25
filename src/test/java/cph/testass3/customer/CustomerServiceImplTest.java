@@ -1,4 +1,4 @@
-package cph.testass3.unitTest;
+package cph.testass3.customer;
 
 import cph.testass3.model.Customer;
 import org.junit.jupiter.api.Test;

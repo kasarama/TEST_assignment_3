@@ -10,4 +10,7 @@ import java.util.Collection;
 public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 
     Collection<Employee> getEmployeesByIdIn(int[] ids);
+
+
+
 }
