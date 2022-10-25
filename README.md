@@ -11,3 +11,13 @@ The system is developed with Spring Boot and PostgreSQL
 
 #### R3: When booking an appointment with a customer, an SMS must be sent
 
+#### Data layer
+Data layer is tested in one file as the scope is very little
+
+#### Service layer
+Customer Service Implementation Test :
+
+Employee Service Implementation Test :
+
+Booking Service Implementation Test : 
+
