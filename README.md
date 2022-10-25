@@ -18,11 +18,16 @@ Features are tested both in service layer and data layer and are listed below
 
 #### Data layer
 Data layer is tested in one file as the scope is very little
+   - [Persistance Unit Test](src/test/java/cph/testass3/unitTest/RepositoryTest.java)   
+
 
 #### Service layer
 Customer Service Implementation Test :
+- [Customer Service Integration Test](src/test/java/cph/testass3/unitTest/CustomerServiceImplTest.java)
 
 Employee Service Implementation Test :
+- [Employee Service Integration Test](src/test/java/cph/testass3/unitTest/EmployeeServiceImplTest.java)
+
 
 Booking Service Implementation Test : 
-
+- [Booking Service Integration Test](src/test/java/cph/testass3/unitTest/BookingServiceImplTest.java)
