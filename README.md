@@ -1,7 +1,7 @@
 # TEST_assignment_3
 
 ### TASK 1: ACQUIRE THE SYSTEM
-The system is developed with Spring Boot and PostgreSQL. To run PostgreSQL in a docker container run this script: [docker-compose]([src/main/resources/db/migration/V3__AlterCustomersAddMobileColumn.sql](https://github.com/kasarama/TEST_assignment_3/blob/main/docker-compose-db.yml))
+The system is developed with Spring Boot and PostgreSQL. To run PostgreSQL in a docker container run this script: [docker-compose]([src/main/resources/db/migration/V3__AlterCustomersAddMobileColumn.sql](docker-compose-db.yml))
 
 ### TASK 2: IMPLEMENT REQUIREMENTS 
 
