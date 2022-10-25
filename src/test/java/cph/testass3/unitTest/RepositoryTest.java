@@ -1,6 +1,7 @@
-package cph.testass3.customer;
+package cph.testass3.unitTest;
 
 import cph.testass3.booking.BookingRepository;
+import cph.testass3.customer.CustomerRepository;
 import cph.testass3.employee.EmployeeRepository;
 import cph.testass3.model.Booking;
 import cph.testass3.model.Customer;

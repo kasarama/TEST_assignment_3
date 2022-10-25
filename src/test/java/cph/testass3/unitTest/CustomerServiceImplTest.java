@@ -1,5 +1,6 @@
-package cph.testass3.customer;
+package cph.testass3.unitTest;
 
+import cph.testass3.customer.CustomerServiceImpl;
 import cph.testass3.model.Customer;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
