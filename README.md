@@ -7,7 +7,12 @@ The system is developed with Spring Boot and PostgreSQL
 
 #### R1: It must be possible to create customers, employees and bookings.
 
+Features are tested both in service layer and data layer and are listed below
+
 #### R2: A customer may have a phone number (this change requires a database migration script).
+
+   - [DB Migration File](src/main/resources/db/migration/V3__AlterCustomersAddMobileColumn.sql)   
+
 
 #### R3: When booking an appointment with a customer, an SMS must be sent
 
