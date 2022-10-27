@@ -12,6 +12,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.testcontainers.junit.jupiter.Testcontainers;
@@ -25,12 +26,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
-@Testcontainers
-@ActiveProfiles("test-containers-flyway")
+@SpringBootTest
 public class BookingServiceImplTest {
-
-
     @Mock
     private BookingRepository bookingRepository;
 
@@ -38,7 +35,8 @@ public class BookingServiceImplTest {
     private SmsServiceImpl smsService;
 
     @InjectMocks
-    private BookingServiceImpl bookingService = new BookingServiceImpl();
+    @Autowired
+    private BookingServiceImpl bookingService; // = new BookingServiceImpl();
 
     private Employee employee = new Employee(10, "Magda", "Waw", new Date());
     private Customer customer = new Customer(11, "Lena", "Rzak", new Date(), "88998899");
